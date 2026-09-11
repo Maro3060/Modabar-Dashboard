@@ -1,0 +1,391 @@
+/* default / smallest <= 640*/
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  font-family: "IBM Plex Sans Arabic", sans-serif;
+  font-weight: 600;
+  direction: rtl;
+}
+
+.page-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-areas:
+    "nav"
+    "balance"
+    "activities"
+    "last"
+    "pill"
+    "view"
+    "encome"
+    "summary"
+    "method";
+}
+
+.box {
+  border: 1px solid #e5e7eb;
+  padding: 16px;
+  border-radius: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  margin: 15px 10px;
+}
+
+/* start nav */
+nav {
+  display: flex;
+  align-items: center;
+  grid-area: nav;
+  background: linear-gradient(180deg, #ffffff 0%, #f3f6fa 100%);
+}
+
+.nav-bar {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  column-gap: 20px;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.logo-img {
+  width: 50px;
+  background: linear-gradient(135deg, #3b82f6 0%, #4338ca 100%);
+  border-radius: 15px;
+  padding: 10px;
+}
+
+.logo-img img {
+  width: 100%;
+  display: block;
+}
+
+.logo-title h1 {
+  font-size: 24px;
+  line-height: 32px;
+  font-weight: 700;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.logo-title span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: oklch(0.446 0.03 256.802);
+}
+
+.status-badge {
+  background-color: #f0fdf4;
+  padding: 4px 8px;
+  border-radius: 6px;
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.status {
+  width: 8px;
+  height: 8px;
+  display: inline-block;
+  background-color: #1bcf63;
+  border-radius: 50%;
+}
+
+.status-badge span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 500;
+  display: block;
+  color: oklch(0.527 0.154 150.069);
+}
+
+.action-buttons {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+button {
+  background-color: oklch(98.5% 0.002 247.839);
+  border: 1px solid oklch(92.8% 0.006 264.531);
+  border-radius: 15px;
+  padding: 12px;
+  transition: all 0.2s ease-in;
+}
+
+button:hover {
+  background-color: #f3f4f6;
+}
+
+.action-buttons svg {
+  width: 16px;
+  height: 16px;
+  display: block;
+  color: oklab(37.306% -0.00585 -0.03386);
+}
+
+.notification {
+  position: relative;
+}
+
+.notification-badge {
+  text-align: center;
+  width: 15px;
+  background-color: #fb2c36;
+  border-radius: 50%;
+  color: #fff;
+  font-size: 12px;
+  font-weight: 600;
+  line-height: 16px;
+  position: absolute;
+  top: -5px;
+  right: -4px;
+}
+
+.personl-account {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+  border: 1px solid #e5e7eb;
+  padding: 8px 12px;
+  background-color: #ffffff;
+  border-radius: 16px;
+  transition: all 0.2s ease-in;
+}
+
+.personl-account:hover {
+  box-shadow: 0px 4px 6px 0px rgb(171, 171, 171);
+}
+
+.personl-account span {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 600;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.personl-account img {
+  width: 35px;
+  display: block;
+  border-radius: 15px;
+}
+/* end nav */
+
+/* start balance section */
+.balance-section {
+  grid-area: balance;
+}
+.balance {
+  display: flex;
+  flex-direction: column;
+  row-gap: 10px;
+  padding: 32px;
+}
+
+.balance span {
+  font-size: 14px;
+  line-height: 20px;
+  color: oklch(0.551 0.027 264.364);
+}
+
+.balance p {
+  font-weight: 700;
+  font-size: 30px;
+  color: oklch(0.21 0.034 264.665);
+  line-height: 36px;
+}
+
+.decrease {
+  display: flex;
+  align-items: center;
+  column-gap: 5px;
+}
+
+.decrease span {
+  color: oklch(0.577 0.245 27.325);
+  font-size: 14px;
+  line-height: 20px;
+}
+
+.increase svg,
+.decrease svg {
+  width: 10px;
+  color: oklch(0.577 0.245 27.325);
+}
+
+.increase svg,
+.increase span {
+  color: oklch(0.627 0.194 149.214);
+}
+/* end balance section */
+
+/* start activity section */
+section.ativity-section {
+  grid-area: activities;
+}
+
+.activity h2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: oklch(0.21 0.034 264.665);
+  margin-bottom: 25px;
+}
+
+.latest-activity {
+  display: flex;
+  flex-direction: column;
+  row-gap: 15px;
+}
+
+.activity-box {
+  background-color: #eff6ff;
+  display: flex;
+  justify-content: space-between;
+  column-gap: 10px;
+  padding: 15px;
+  border-left: solid 4px #2b7fff;
+  border-radius: 12px;
+}
+
+.add-card.activity-box {
+  background-color: #f0fdf4;
+  border-left: solid 4px #00c950;
+}
+
+.activity-box .icon {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  padding: 10px 0px;
+}
+
+.create-account.activity-box .icon {
+  background-color: #dbeafe;
+}
+
+.add-card.activity-box .icon {
+  background-color: #dbfce7;
+}
+
+.icon svg {
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #155dfc;
+}
+
+.add-card .icon svg {
+  color: #00a63e;
+}
+
+.activity-details {
+  display: flex;
+  row-gap: 10px;
+  column-gap: 12px;
+}
+
+.creat-acount-details h3 {
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 700;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.activity-details p {
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.446 0.03 256.802);
+}
+
+.activity-details span {
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.551 0.027 264.364);
+  display: block;
+  margin-top: 10px;
+}
+
+.activity-type span {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.546 0.245 262.881);
+}
+
+.activity-type.card span {
+  color: oklch(62.7% 0.194 149.214);
+}
+
+.activity-section hr {
+  margin: 16px;
+  border: 1px oklch(96.7% 0.003 264.542) solid;
+}
+
+.more {
+  text-align: center;
+}
+
+.more a {
+  text-decoration: none;
+  color: oklch(0.488 0.243 264.376);
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+}
+/* end activity section */
+
+/* start latest Transactions section */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.section-header h2 {
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.section-header .show-more a {
+  text-decoration: none;
+  color: oklch(44.6% 0.03 256.802);
+  font-size: 12px;
+  font-weight: 500;
+  line-height: calc(1/.75);
+  display: flex;
+  align-items: center;
+  column-gap: 3px;
+}
+
+
+.section-header .show-more svg {
+  width: 7px;
+  color: oklch(44.6% 0.03 256.802);
+}
+
+.latest-transition-section table {
+  margin-top: 20px;
+  width: 100%;
+}
+
+.latest-transition-section table th {
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.373 0.034 259.733);
+  font-weight: 600;
+}
+
+.latest-transition-section table thead tr:first-child {
+  text-align: right;
+}
+/* end latest Transactions section */
