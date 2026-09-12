@@ -361,12 +361,11 @@ section.ativity-section {
   color: oklch(44.6% 0.03 256.802);
   font-size: 12px;
   font-weight: 500;
-  line-height: calc(1/.75);
+  line-height: calc(1 / 0.75);
   display: flex;
   align-items: center;
   column-gap: 3px;
 }
-
 
 .section-header .show-more svg {
   width: 7px;
@@ -376,6 +375,7 @@ section.ativity-section {
 .latest-transition-section table {
   margin-top: 20px;
   width: 100%;
+  border-collapse: collapse;
 }
 
 .latest-transition-section table th {
@@ -385,7 +385,88 @@ section.ativity-section {
   font-weight: 600;
 }
 
-.latest-transition-section table thead tr:first-child {
+.latest-transition-section table thead th:first-child {
   text-align: right;
+}
+
+/* .latest-transition-section table thead th:last-child {
+  text-align: left;
+} */
+.latest-transition-section table td .trans-data {
+  /* background-color: #155dfc; */
+  display: flex;
+  column-gap: 10px;
+}
+
+.latest-transition-section table td .trans-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.latest-transition-section table td .trans-info span:first-child {
+  font-weight: 500;
+  color: oklch(0.21 0.034 264.665);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.latest-transition-section table td .trans-info span:nth-child(2) {
+  font-weight: 600;
+  color: oklch(0.551 0.027 264.364);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.latest-transition-section table tr td img {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+}
+
+.latest-transition-section table td .badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  column-gap: 5px;
+  width: fit-content;
+  background-color: #dbfce7;
+  color: oklch(0.448 0.119 151.328);
+  font-weight: 500;
+  line-height: 16px;
+  font-size: 12px;
+  padding: 4px 10px;
+  border-radius: 12px;
+}
+
+.latest-transition-section table tr td svg {
+  color: #016630;
+  width: 12px;
+  height: 12px;
+}
+
+.latest-transition-section table td:nth-child(3) {
+  font-size: 12px;
+  font-weight: 600;
+  color: oklch(0.446 0.03 256.802);
+  line-height: 16px;
+}
+
+span.increase {
+  font-weight: 600;
+  color: oklch(0.627 0.194 149.214);
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.latest-transition-section table td {
+  text-align: center;
+  vertical-align: middle;
+  padding: 12px 8px;
+  border-bottom: 1px solid #ffffff;
+}
+
+table th {
+  border-bottom: 2px solid #e5e7eb;
+  padding: 12px 8px;
 }
 /* end latest Transactions section */
