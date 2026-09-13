@@ -408,6 +408,7 @@ section.ativity-section {
   color: oklch(0.21 0.034 264.665);
   font-size: 12px;
   line-height: 16px;
+  text-align: right;
 }
 
 .latest-transition-section table td .trans-info span:nth-child(2) {
@@ -415,6 +416,7 @@ section.ativity-section {
   color: oklch(0.551 0.027 264.364);
   font-size: 12px;
   line-height: 16px;
+  text-align: right;
 }
 
 .latest-transition-section table tr td img {
@@ -436,6 +438,11 @@ section.ativity-section {
   font-size: 12px;
   padding: 4px 10px;
   border-radius: 12px;
+}
+
+.latest-transition-section table td .badge.bause {
+  background-color: #fef9c2;
+  color: oklch(0.476 0.114 61.907);
 }
 
 .latest-transition-section table tr td svg {
@@ -468,5 +475,95 @@ span.increase {
 table th {
   border-bottom: 2px solid #e5e7eb;
   padding: 12px 8px;
+}
+
+.trans_img.icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.trans_img.icon.restaurant {
+  background-color: #ffedd4;
+}
+
+.trans_img.icon.shopping {
+  background-color: #dbeafe;
+}
+
+.trans_img.icon.gas {
+  background-color: #ffe2e2;
+}
+
+.trans_img.icon svg {
+  width: 12px;
+  height: 12px;
+}
+
+.trans_img.icon.trans_img.icon.shopping svg {
+  color: #155dfc;
+}
+
+.trans_img.icon.trans_img.icon.restaurant svg {
+  color: #f54900;
+}
+
+.trans_img.icon.trans_img.icon.gas svg {
+  color: #e7000b;
+}
+
+.latest-transition-section table td .badge.shopping {
+  background-color: #dbeafe;
+  color: #193cb8;
+}
+
+.latest-transition-section table td .badge.shopping svg {
+  color: #193cb8;
+}
+
+.latest-transition-section table td .badge.restaurant {
+  background-color: #ffedd4;
+  color: oklch(0.47 0.157 37.304);
+}
+
+.latest-transition-section table td .badge.restaurant svg {
+  color: oklch(0.47 0.157 37.304);
+}
+
+.latest-transition-section table td .badge.half-bill {
+  background-color: #f3e8ff;
+  color: #6e11b0;
+}
+
+.latest-transition-section table td .badge.half-bill svg {
+  color: #6e11b0;
+}
+
+.latest-transition-section table td .badge.transportation {
+  background-color: #ffe2e2;
+  color: #9f0712;
+}
+
+.latest-transition-section table td .badge.transportation svg {
+  color: #9f0712;
+}
+
+.latest-transition-section table td .badge.intertaiment {
+  background-color: #e0e7ff;
+  color: oklch(0.398 0.195 277.366);
+}
+
+.latest-transition-section table td .badge.intertaiment svg {
+  color: oklch(0.398 0.195 277.366);
+}
+
+span.dec {
+  font-weight: 600;
+  color: oklch(0.21 0.034 264.665);
+  line-height: 16px;
+  font-size: 12px;
 }
 /* end latest Transactions section */
