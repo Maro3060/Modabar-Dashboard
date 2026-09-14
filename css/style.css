@@ -897,6 +897,83 @@ section.budget-section {
 
 .wid-l-14 {
   width: 86%;
-  background-color: #00C950;
+  background-color: #00c950;
 }
 /* end Budget section */
+
+/* start income vs expenses section */
+section.income-vs-expenses {
+  grid-area: encome;
+}
+
+.key {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+  margin: auto;
+  /* background-color: #009966; */
+}
+
+.key span {
+  color: rgb(100, 116, 139);
+  font-weight: 600;
+  line-height: 18px;
+  font-size: 12px;
+}
+
+.income-box {
+  width: 12px;
+  height: 12px;
+  background-color: #10b981;
+  border-radius: 2px;
+}
+
+.expenses-box {
+  width: 12px;
+  height: 12px;
+  background-color: #ef4444;
+  border-radius: 2px;
+}
+
+.chart-keys {
+  margin: auto;
+  display: flex;
+  width: 30%;
+}
+
+.chart-wrapper {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-around;
+}
+
+.income-chart-column {
+  width: 16px;
+  height: 95px;
+  background-color: #3cc698;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.chart {
+  display: flex;
+  align-items: end;
+  column-gap: 2px;
+}
+
+.expenses-chart-column {
+  width: 16px;
+  height: 42px;
+  background-color: #ef4444;
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+
+.week-details span {
+  color: rgb(100, 116, 139);
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 18px;
+  text-align: center;
+}
+/* end income vs expenses section */
