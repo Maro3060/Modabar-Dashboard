@@ -498,6 +498,14 @@ table th {
   background-color: #ffe2e2;
 }
 
+.trans_img.icon.fit {
+  background-color: #CEFAFE;
+}
+
+.trans_img.icon.learning {
+  background-color: #D0FAE5;
+}
+
 .trans_img.icon svg {
   width: 12px;
   height: 12px;
@@ -513,6 +521,14 @@ table th {
 
 .trans_img.icon.trans_img.icon.gas svg {
   color: #e7000b;
+}
+
+.trans_img.icon.trans_img.icon.fit svg {
+  color: #0092B8;
+}
+
+.trans_img.icon.trans_img.icon.learning svg {
+  color: #009966;
 }
 
 .latest-transition-section table td .badge.shopping {
@@ -547,17 +563,31 @@ table th {
   color: #9f0712;
 }
 
+.latest-transition-section table td .badge.transportation {
+  background-color: #ffe2e2;
+  color: #9f0712;
+}
+
 .latest-transition-section table td .badge.transportation svg {
   color: #9f0712;
 }
 
 .latest-transition-section table td .badge.intertaiment {
   background-color: #e0e7ff;
+  color: #005F78;
+}
+
+.latest-transition-section table td .badge.health {
+  background-color: #CEFAFE;
   color: oklch(0.398 0.195 277.366);
 }
 
 .latest-transition-section table td .badge.intertaiment svg {
   color: oklch(0.398 0.195 277.366);
+}
+
+.latest-transition-section table td .badge.health svg {
+  color: #005F78;
 }
 
 span.dec {
