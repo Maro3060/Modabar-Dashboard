@@ -724,3 +724,79 @@ p.deadline.not-close {
   color: oklch(0.551 0.027 264.364);
 }
 /* end monthly bills section */
+
+/* start Budget section */
+.total-budget {
+  margin-top: 15px;
+  background-color: #eef3ff;
+  border-radius: 16px;
+  padding: 20px;
+}
+
+.budget-card-header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.total-palance p:first-child {
+  color: oklch(0.546 0.245 262.881);
+  font-weight: 500;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.total-palance p:nth-child(2) {
+  color: oklch(0.379 0.146 265.522);
+  font-weight: 700;
+  line-height: 32px;
+  font-size: 24px;
+}
+
+.residual p:first-child {
+  color: oklch(0.551 0.027 264.364);
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 14px;
+}
+
+.residual p:nth-child(2) {
+  color: oklch(0.627 0.194 149.214);
+  font-weight: 600;
+  line-height: 28px;
+  font-size: 18px;
+}
+
+.bar {
+  margin-top: 10px;
+}
+
+.bar-title {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 3px;
+}
+
+.bar-title p {
+  color: oklch(0.446 0.03 256.802);
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 12px;
+}
+
+.outter-bar {
+  width: 100%;
+  height: 10px;
+  background-color: #E5E7EB;
+  border-radius: 16px;
+}
+
+.inner-bar {
+  height: 100%;
+  border-radius: inherit;
+}
+
+.inner-bar.wid-80 {
+  background-color: #516DFF;
+  width: 82.5%;
+}
+/* end Budget section */
