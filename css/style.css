@@ -499,11 +499,11 @@ table th {
 }
 
 .trans_img.icon.fit {
-  background-color: #CEFAFE;
+  background-color: #cefafe;
 }
 
 .trans_img.icon.learning {
-  background-color: #D0FAE5;
+  background-color: #d0fae5;
 }
 
 .trans_img.icon svg {
@@ -524,7 +524,7 @@ table th {
 }
 
 .trans_img.icon.trans_img.icon.fit svg {
-  color: #0092B8;
+  color: #0092b8;
 }
 
 .trans_img.icon.trans_img.icon.learning svg {
@@ -574,11 +574,11 @@ table th {
 
 .latest-transition-section table td .badge.intertaiment {
   background-color: #e0e7ff;
-  color: #005F78;
+  color: #005f78;
 }
 
 .latest-transition-section table td .badge.health {
-  background-color: #CEFAFE;
+  background-color: #cefafe;
   color: oklch(0.398 0.195 277.366);
 }
 
@@ -587,7 +587,7 @@ table th {
 }
 
 .latest-transition-section table td .badge.health svg {
-  color: #005F78;
+  color: #005f78;
 }
 
 span.dec {
@@ -597,3 +597,43 @@ span.dec {
   font-size: 12px;
 }
 /* end latest Transactions section */
+/* start monthly bills section */
+.monthly-bills-section {
+  grid-area: pill;
+}
+.total-monthly-bills {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.total-monthly-bills .total {
+  font-weight: 700;
+  line-height: 36px;
+  font-size: 30px;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.total-monthly-bills .total-desc {
+  font-weight: 600;
+  line-height: 20px;
+  font-size: 14px;
+  color: oklch(0.551 0.027 264.364);
+}
+
+.inner-boxes-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content:space-around;
+  gap: 10px 10px;
+  margin-top: 10px;
+}
+
+.inner-box {
+  text-align: center;
+  width: 49%;
+  background-color: #F9FAFB;
+  border: solid 1px;
+  border-radius: 16px;
+  padding: 10px;
+}
+/* end monthly bills section */
