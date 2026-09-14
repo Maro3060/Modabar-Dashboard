@@ -623,7 +623,7 @@ span.dec {
 .inner-boxes-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content:space-around;
+  justify-content: space-around;
   gap: 10px 10px;
   margin-top: 10px;
 }
@@ -631,9 +631,96 @@ span.dec {
 .inner-box {
   text-align: center;
   width: 49%;
-  background-color: #F9FAFB;
-  border: solid 1px;
+  background-color: #f9fafb;
+  /* border: solid 1px; */
   border-radius: 16px;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  row-gap: 3px;
+}
+
+.inner-box .inner-box-title {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.551 0.027 264.364);
+}
+
+.inner-box .price {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 24px;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.inner-box .deadline {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 16px;
+  color: oklch(0.637 0.237 25.331);
+}
+
+.inner-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 7px;
+  margin: auto;
+}
+
+.inner-icon.wifi {
+  background-color: #dbeafe;
+}
+
+.inner-icon.wifi svg {
+  color: #155dfc;
+}
+
+.inner-icon.electricity-bill {
+  background-color: #fef9c2;
+}
+
+.inner-icon.inner-icon.electricity-bill svg {
+  color: #d08700;
+}
+
+.inner-icon.phone-bill {
+  background-color: #dbfce7;
+}
+
+.inner-icon.inner-icon.phone-bill svg {
+  color: #00a63e;
+}
+
+.inner-icon.netflix-bill {
+  background-color: #ffe2e2;
+}
+
+.inner-icon.inner-icon.netflix-bill svg {
+  color: #e7000b;
+}
+
+p.deadline.close {
+  color: oklch(0.637 0.237 25.331);
+}
+
+p.deadline.orange-close {
+  color: oklch(0.705 0.213 47.604);
+}
+
+p.deadline.orange-close {
+  color: oklch(0.705 0.213 47.604);
+}
+
+p.deadline.green-close {
+  color: oklch(0.723 0.219 149.579);
+}
+
+p.deadline.not-close {
+  color: oklch(0.551 0.027 264.364);
 }
 /* end monthly bills section */
