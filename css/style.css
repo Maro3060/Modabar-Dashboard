@@ -977,3 +977,80 @@ section.income-vs-expenses {
   text-align: center;
 }
 /* end income vs expenses section */
+
+/* start summary account section */
+section.summary-section {
+  grid-area: summary;
+}
+
+.summary-box {
+  background-color: #f9fafb;
+  border: solid 1px #f9fafb;
+  border-radius: 16px;
+  margin-block: 15px;
+  padding: 15px;
+}
+
+.summary-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 9px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+}
+
+.summary-icon.commercial-account {
+  background-color: #dbeafe;
+  color: #155dfc;
+}
+
+.summary-account-details {
+  display: flex;
+  align-items: center;
+  column-gap: 10px;
+}
+
+.summary-account-data {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.account-number p:first-child {
+  font-weight: 500;
+  line-height: 24px;
+  font-size: 16px;
+  color: oklch(0.21 0.034 264.665);
+}
+
+.account-number p:nth-child(2) {
+  font-weight: 600;
+  line-height: 16px;
+  font-size: 12px;
+  color: oklch(0.551 0.027 264.364);
+}
+
+.account-balance span {
+  font-weight: 600;
+  line-height: 24px;
+  font-size: 16px;
+  color: account-balance;
+}
+
+.summary-icon.saving-account {
+  background-color: #dbfce7;
+  color: #00a63e;
+}
+
+.summary-icon.visa-card {
+  background-color: #f3e8ff;
+  color: #9810fa;
+}
+
+.account-balance .minus {
+  color:oklch(0.577 0.245 27.325);
+}
+/* end summary account section */
