@@ -1051,6 +1051,168 @@ section.summary-section {
 }
 
 .account-balance .minus {
-  color:oklch(0.577 0.245 27.325);
+  color: oklch(0.577 0.245 27.325);
 }
 /* end summary account section */
+
+/* start baying method section */
+.baying-method-section {
+  grid-area: method;
+}
+
+.flip-card {
+  height: 200px;
+  width: 100%;
+  perspective: 1000px;
+  margin-block: 10px;
+}
+
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.8s;
+  transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  border-radius: 16px;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.flip-card-front {
+  background-color: #372aac;
+}
+
+.card-logos {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.bank-logo-frame {
+  width: 48px;
+  height: 32px;
+  background-color: rgba(238, 242, 246, 0.4);
+  border-radius: 7px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bank-logo {
+  width: 30px;
+  height: 20px;
+  background-color: rgba(238, 242, 246, 0.4);
+  border-radius: inherit;
+}
+
+.card-logos img {
+  width: 40px;
+}
+
+.card-details {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  color: #ffffff;
+  margin-top: 15px;
+}
+
+.card-data {
+  display: flex;
+  flex-direction: column;
+  row-gap: 5px;
+}
+
+.flip-card-back {
+  background-color: #0c1321;
+  transform: rotateY(180deg);
+}
+
+.black-stripe {
+  background: linear-gradient(90deg, #000, #111 40%, #2b2b2b);
+  width: 100%;
+  height: 40px;
+  border-radius: 3px;
+  margin-bottom: 5px;
+}
+
+.flip-card-back p {
+  font-weight: 600;
+  line-height: 12px;
+  font-size: 9px;
+  color: rgba(255, 255, 255, 0.48);
+  margin-bottom: 4px;
+}
+
+.white-stripe {
+  background-color: #f2f5f8;
+  width: 100%;
+  height: 22px;
+  border-radius: 3px;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+}
+
+.white-stripe .inside-stribe {
+  background-color: #cccfd2;
+  width: 80%;
+  height: 100%;
+  border-radius: inherit;
+}
+
+.flip-card-back .white-stripe span {
+  font-weight: 700;
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.85);
+  margin-left: 5px;
+}
+
+.cvv-part {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin-top: 5px;
+}
+
+.cvv-part p {
+  font-weight: 600;
+  font-size: 11px;
+  color: oklch(0.872 0.01 258.338);
+  margin-bottom: 2px;
+}
+
+.cvv-number {
+  background-color: #ffffff;
+  padding: 4px 10px;
+  border-radius: 6px;
+  font-weight: 700;
+  color: rgb(17, 24, 39);
+  font-size: 12px;
+}
+
+.cards-wrapper .flip-card:nth-child(2) .flip-card-front {
+  background-color: oklch(51.4% 0.222 16.935);
+}
+
+.cards-wrapper .flip-card:nth-child(3) .flip-card-front .exp p:nth-child(2) {
+  color: #00a63e;
+}
+
+.cards-wrapper .flip-card:nth-child(3) .flip-card-front {
+  background-color: oklch(42.4% 0.199 265.638);
+}
+/* end baying method section */
