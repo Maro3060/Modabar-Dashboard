@@ -1,0 +1,141 @@
+/* ---------------------------------------------------------------------
+   sm  ≥ 640px
+   --------------------------------------------------------------------- */
+@media (min-width: 640px) {
+  .logo-img {
+    width: 50px;
+    padding: 10px;
+    border-radius: 15px;
+  }
+
+  .logo-title h1 {
+    font-size: 24px;
+    line-height: 32px;
+  }
+
+  .logo-title span,
+  .status-badge {
+    display: flex;
+  }
+
+  .logo-title span {
+    display: block;
+  }
+
+  .personl-account {
+    padding: 8px 12px;
+  }
+
+  .personl-account span {
+    display: block;
+  }
+
+  .action-buttons {
+    column-gap: 10px;
+  }
+
+  .balance-section {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  .balance p {
+    font-size: 22px;
+    line-height: 30px;
+  }
+
+  .latest-transition-section table th:nth-child(2),
+  .latest-transition-section table td:nth-child(2),
+  .latest-transition-section table th:nth-child(3),
+  .latest-transition-section table td:nth-child(3) {
+    display: table-cell;
+  }
+
+  .latest-transition-section table td,
+  .latest-transition-section table th {
+    padding: 12px 8px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   md  ≥ 768px  — two-column dashboard
+   --------------------------------------------------------------------- */
+@media (min-width: 768px) {
+  main {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-areas:
+      "balance    balance"
+      "activities encome"
+      "last       last"
+      "pill       summary"
+      "view       method"
+  }
+
+  .balance {
+    padding: 24px;
+  }
+
+  .balance p {
+    font-size: 26px;
+    line-height: 32px;
+  }
+
+  .cards-wrapper {
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  }
+}
+
+/* ---------------------------------------------------------------------
+   lg  ≥ 1024px  — sidebar appears
+   --------------------------------------------------------------------- */
+@media (min-width: 1024px) {
+  .page-layout {
+    grid-template-columns: 250px minmax(0, 1fr);
+    grid-template-areas:
+      "side nav"
+      "side main";
+    align-items: start;
+  }
+
+  aside.side {
+    display: block;
+    grid-area: side;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   xl  ≥ 1280px  — three-column dashboard
+   --------------------------------------------------------------------- */
+@media (min-width: 1280px) {
+  main {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-areas:
+      "balance balance    balance"
+      "last    last       pill"
+      "last    last       activities"
+      "view    summary    encome"
+      "view    method     method";
+  }
+
+  .balance p {
+    font-size: 30px;
+    line-height: 36px;
+  }
+}
+
+/* ---------------------------------------------------------------------
+   2xl  ≥ 1536px  — keep the layout from stretching on ultra-wide screens
+   --------------------------------------------------------------------- */
+@media (min-width: 1536px) {
+  .page-layout {
+    max-width: 1800px;
+    margin-inline: auto;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  .balance {
+    padding: 32px;
+  }
+}

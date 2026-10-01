@@ -5,25 +5,75 @@
   margin: 0;
 }
 
+html {
+  overflow-x: clip;
+}
+
 body {
   font-family: "IBM Plex Sans Arabic", sans-serif;
   font-weight: 600;
   direction: rtl;
+  overflow-x: clip;
 }
 
 .page-layout {
   display: grid;
-  grid-template-columns: auto 1fr;
+  grid-template-columns: minmax(0, 1fr);
   grid-template-areas:
-    "side nav"
-    "side balance"
-    "side activities"
-    "side last"
-    "side pill"
-    "side view"
-    "side encome"
-    "side summary"
-    "side method";
+    "nav"
+    "main";
+  gap: 0;
+}
+
+nav {
+  grid-area: nav;
+}
+
+main {
+  grid-area: main;
+  min-width: 0;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  grid-template-areas:
+    "balance"
+    "activities"
+    "last"
+    "pill"
+    "view"
+    "encome"
+    "summary"
+    "method";
+  gap: 0;
+}
+
+main > section {
+  min-width: 0;
+}
+
+main > .balance-section {
+  grid-area: balance;
+}
+main > .activity-section {
+  grid-area: activities;
+}
+main > .latest-transition-section {
+  grid-area: last;
+}
+main > .Monthly-bills-section,
+main > .monthly-bills-section {
+  grid-area: pill;
+}
+main > .budget-section {
+  grid-area: view;
+}
+main > .income-vs-expenses {
+  grid-area: encome;
+}
+main > .summary-section {
+  grid-area: summary;
+}
+main > .baying-method-section {
+  grid-area: method;
 }
 
 .box {
@@ -34,15 +84,25 @@ body {
   margin: 15px 10px;
 }
 
+main > section:not(.balance-section) {
+  display: flex;
+}
+
+main > section:not(.balance-section) > .box {
+  flex: 1;
+  min-width: 0;
+}
+
 /* start side bar */
 aside.side {
+  display: none;
   grid-area: side;
   width: 250px;
   border: solid 1px #e5e7eb;
   padding: 25px;
   position: sticky;
   top: 0;
-  align-self: start; 
+  align-self: start;
   max-height: 100vh;
   overflow-y: auto;
 }
@@ -97,7 +157,7 @@ menu h3 {
   column-gap: 10px;
   margin-block: 30px;
   padding: 10px;
-  transition: all .2s;
+  transition: all 0.2s;
 }
 
 .action:hover {
@@ -143,6 +203,7 @@ menu h3 {
 
 /* start nav */
 nav {
+  grid-area: nav;
   display: flex;
   align-items: center;
   grid-area: nav;
@@ -154,7 +215,7 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  column-gap: 20px;
+  column-gap: 10px;
 }
 
 .logo {
@@ -164,10 +225,11 @@ nav {
 }
 
 .logo-img {
-  width: 50px;
   background: linear-gradient(135deg, #3b82f6 0%, #4338ca 100%);
-  border-radius: 15px;
-  padding: 10px;
+  width: 40px;
+  padding: 8px;
+  border-radius: 12px;
+  flex-shrink: 0;
 }
 
 .logo-img img {
@@ -289,12 +351,15 @@ button:hover {
 /* start balance section */
 .balance-section {
   grid-area: balance;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
 }
+
 .balance {
   display: flex;
   flex-direction: column;
   row-gap: 10px;
-  padding: 32px;
+  padding: 20px;
 }
 
 .balance span {
@@ -335,7 +400,7 @@ button:hover {
 /* end balance section */
 
 /* start activity section */
-section.ativity-section {
+section.activity-section {
   grid-area: activities;
 }
 
@@ -361,6 +426,7 @@ section.ativity-section {
   padding: 15px;
   border-left: solid 4px #2b7fff;
   border-radius: 12px;
+  flex-shrink: 1;
 }
 
 .add-card.activity-box {
@@ -373,6 +439,7 @@ section.ativity-section {
   height: 35px;
   border-radius: 50%;
   padding: 10px 0px;
+  flex-shrink: 0;
 }
 
 .create-account.activity-box .icon {
@@ -421,6 +488,10 @@ section.ativity-section {
   margin-top: 10px;
 }
 
+.activity-type {
+  flex-shrink: 0;
+}
+
 .activity-type span {
   font-weight: 500;
   font-size: 12px;
@@ -451,6 +522,9 @@ section.ativity-section {
 /* end activity section */
 
 /* start latest Transactions section */
+section.latest-transition-section {
+  grid-area: last;
+}
 .section-header {
   display: flex;
   justify-content: space-between;
@@ -499,10 +573,16 @@ section.ativity-section {
 /* .latest-transition-section table thead th:last-child {
   text-align: left;
 } */
+.latest-transition-section table td,
+.latest-transition-section table th {
+  padding: 10px 4px;
+}
+
 .latest-transition-section table td .trans-data {
-  /* background-color: #155dfc; */
   display: flex;
   column-gap: 10px;
+  align-items: center;
+  text-align: right;
 }
 
 .latest-transition-section table td .trans-info {
@@ -705,9 +785,10 @@ span.dec {
 }
 /* end latest Transactions section */
 /* start monthly bills section */
-.monthly-bills-section {
+section.monthly-bills-section {
   grid-area: pill;
 }
+
 .total-monthly-bills {
   margin-top: 10px;
   text-align: center;
@@ -836,6 +917,7 @@ p.deadline.not-close {
 section.budget-section {
   grid-area: view;
 }
+
 .total-budget {
   margin-top: 15px;
   background-color: #eef3ff;
@@ -1046,6 +1128,8 @@ section.income-vs-expenses {
   margin: auto;
   display: flex;
   width: 30%;
+  width: fit-content;
+  column-gap: 20px;
 }
 
 .chart-wrapper {
@@ -1106,6 +1190,7 @@ section.summary-section {
   justify-content: center;
   align-items: center;
   padding: 10px;
+  flex-shrink: 0;
 }
 
 .summary-icon.commercial-account {
@@ -1117,6 +1202,7 @@ section.summary-section {
   display: flex;
   align-items: center;
   column-gap: 10px;
+  min-width: 0;
 }
 
 .summary-account-data {
@@ -1124,6 +1210,9 @@ section.summary-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  flex-wrap: wrap;
+  gap: 4px 10px;
+  min-width: 0;
 }
 
 .account-number p:first-child {
@@ -1309,6 +1398,16 @@ section.summary-section {
   font-weight: 700;
   color: rgb(17, 24, 39);
   font-size: 12px;
+}
+
+.cards-wrapper {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 10px;
+}
+
+.cards-wrapper .flip-card {
+  margin-block: 0;
 }
 
 .cards-wrapper .flip-card:nth-child(2) .flip-card-front {
