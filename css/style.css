@@ -1091,16 +1091,11 @@ section.budget-section {
 /* end Budget section */
 
 /* start income vs expenses section */
-section.income-vs-expenses {
-  grid-area: encome;
-}
-
 .key {
   display: flex;
   align-items: center;
   column-gap: 10px;
   margin: auto;
-  /* background-color: #009966; */
 }
 
 .key span {
