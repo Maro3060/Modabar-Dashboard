@@ -126,11 +126,11 @@
   main {
     grid-template-columns: repeat(3, minmax(0, 1fr));
     grid-template-areas:
-      "balance balance    balance"
-      "last    last       pill"
-      "last    last       activities"
-      "view    summary    encome"
-      "view    method     method";
+      "balance       balance    balance"
+      "activities    last       last"
+      "pill          last       last"
+      "view          encome     method"
+      "view          summary           method";
   }
 
   .balance p {
